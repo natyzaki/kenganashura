@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(85, 12, 12);
+}
+header{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+
+}
+.container{
+    max-width: 1100px;
+    margin: auto;
+
+}
+.card{
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2em;
+    background-color: rgb(209, 30, 30);
+    margin-bottom: 2em;
+}
+
+img{
+    width: 100%;
+
+}
+
+.card div{
+
+    padding: 2em;
+
+}
+
+.card:nth-child(even) img{
+    order:2;
+}
+.btn{
+    background-color: rgb(162, 149, 149);
+    color: black;
+    padding: 10px 15px; display: inline-block;
+    border-radius: 10px;
+    margin-top: 2em;
+    cursor: pointer;
+    
+
+}
+a{
+    text-decoration: none;
+
+}
+.btn:hover{
+    background-color: rgb(8, 7, 7);
+    color: rgb(227, 22, 22);
+    box-shadow: 1px 1px 2px black;
+}
+.galeria{
+    margin: 2em;
+    display: flex;
+    height: 20em;
+    gap: 0.5em;
+
+}
+.galeria div{
+    flex: 1;
+    background-size: cover;
+    background-position: top center;}
+
+.galeria div:hover{
+    flex: 3;
+    transition: all 1s cubic-bezier(.17,.67,.83,.67);
+    box-shadow: 25px 25px 15px rgb(7, 7, 6);
+}
+.galeria:hover div:not(:hover){
+    filter: grayscale(90%) opacity(0.5)
+
+}
